@@ -22,6 +22,14 @@ class PlaygroundWidgetState extends State<PlaygroundWidget> {
   int carCount = 0;
   int goatCount = 0;
   String msg = "";
+
+  void resetPoints() {
+    setState(() {
+      this.carCount = 0;
+      this.goatCount = 0;
+    });
+  }
+
   @override
   void initState() {
     this.resetOpenStatuses();
@@ -102,7 +110,9 @@ class PlaygroundWidgetState extends State<PlaygroundWidget> {
           ),
           TextButton(
               onPressed: this.resetOpenStatuses, child: Text("Tekrar dene")),
-          Text("Araba: ${carCount}, Keçi: ${goatCount}")
+          Text("Araba: ${carCount}, Keçi: ${goatCount}"),
+          TextButton(
+              onPressed: this.resetPoints, child: Text("Puanları sıfırla")),
         ],
       ),
     );
