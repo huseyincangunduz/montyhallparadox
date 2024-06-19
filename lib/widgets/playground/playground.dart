@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:montyhallparadox/enum/boxType.dart';
 import 'package:montyhallparadox/widgets/box/box.dart';
 import 'package:collection/collection.dart';
+import 'package:montyhallparadox/widgets/informationPage/InformationPage.dart';
 
 class PlaygroundWidget extends StatefulWidget {
   const PlaygroundWidget({super.key});
@@ -113,8 +114,16 @@ class PlaygroundWidgetState extends State<PlaygroundWidget> {
           Text("Araba: ${carCount}, Keçi: ${goatCount}"),
           TextButton(
               onPressed: this.resetPoints, child: Text("Puanları sıfırla")),
+          TextButton(
+              onPressed: this.goToInfo,
+              child: Text("Monty Hall Problemi nedir?")),
         ],
       ),
     );
+  }
+
+  void goToInfo() {
+    Navigator.push(context,
+        new MaterialPageRoute(builder: (ctx) => new InformationPageWidget()));
   }
 }
