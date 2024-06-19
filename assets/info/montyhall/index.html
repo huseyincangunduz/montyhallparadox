@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monty Hall Problemi</title>
+    <style>
+      .bg-green {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Monty Hall problemi</h1>
+    <p>
+      Monty Hall Paradoksu ya da Monty Hall Problemi "Let's make a deal" adında
+      yarışma programın formatından gelen bir bulmacadır.
+    </p>
+    <h2>Yarışma formatı</h2>
+    <p>
+      Bu program; bir sunucu, bir yarışmacı, birinin araba ve diğerlerinde keçi
+      olacak şekilde 3 kapılı oda ile yapılmaktadır.
+    </p>
+    <ul>
+      <li>Yarışmacı bir oda seçer.</li>
+      <li>
+        Sunucu, içinde keçi olan başka bir odayı seçer ve diğer iki oda ile
+        tekrar seçim hakkı verilir.
+      </li>
+      <li>Yarışmacı seçimine sadık kalabilir, ya da diğer odayı seçebilir.</li>
+      <li>
+        Sunucu, yarışmacının en son seçtiği odanın kapısını açar ve içinde ne
+        çıkarsa yarışmacı onu kazanır.
+      </li>
+    </ul>
+    <h2>Yarışmacı bakış açısıyla düşünürsek</h2>
+    <p>Yarışmacı olarak doğru cevabı bilmediğimizi varsayıyoruz.</p>
+    <ul>
+      <li>
+        Eğer sunucu, bize diğer keçi olan odayı açmasaydı (ya da aynı şekilde
+        yarışmacı seçiminde sadık kaldığı durumlarda); araba kazanma
+        olasılığımız %33 idi.
+      </li>
+      <li>
+        İkinci seçim hakkında diğer kutuyu seçersek, ilk yaptığımız seçimin
+        aşırı bir önemi kalmaz, sadece iki kutudan birini seçmiş olacağız.
+        Burada da araba kazanma olasılığı %50 olmakta.
+      </li>
+    </ul>
+    <p>Tabi ki bu olay bununla sınırlı değil;</p>
+    <p>
+      Üstteki değerlendirmede sadece odaları ve içindekilerini düşünerek
+      hesaplama yaptık. Ancak burada bu ikinci seçimde sadık kalma ve seçimi
+      değiştirmeyi kattığımız zaman işler daha da değişiyor
+    </p>
+    <h3>İkinci seçimde seçimimize sadık kaldığımız anda anda</h3>
+    <p>
+      Herhangi bir değişiklik yapmıyoruz ve olması beklenen sonuç gerçekleşiyor
+    </p>
+    <table>
+      <tr>
+        <th>Oodanın içindeki</th>
+        <th>Sonuçta kazandığımız</th>
+      </tr>
+      <tr class="bg-green">
+        <td>Araba</td>
+        <td>Araba</td>
+      </tr>
+      <tr>
+        <td>Keçi</td>
+        <td>Keçi</td>
+      </tr>
+      <tr>
+        <td>Keçi</td>
+        <td>Keçi</td>
+      </tr>
+    </table>
+    <p>Üstteki tabloda görüldüğü üzere araba kazanma olasılığımız sadece %33</p>
+    <h3>İkinci seçimde seçimimizi değiştirdiğimiz anda</h3>
+    <p>
+      İlk durumda zaten araba kazanma ihtimalimiz 1/3 iken, araba kazanamama
+      olasılığımız da 2/3 idi. Ancak burada da iki durum söz konusu
+    </p>
+    <ul>
+      <li>
+        Eğer ilk seçimimiz doğru ise (1/3), ikinci seçimde maalesef araba
+        kazanamayacağız. Ancak;
+      </li>
+      <li>
+        Eğer ilk seçimimiz yanlış ise (ilkini doğru seçtiğimize göre
+        gerçekleşmesi daha olası), ikinci seçimde araba ile mahallede piyasa
+        yapabileceğiz.
+      </li>
+    </ul>
+    <p>
+      Kapımıza sadık kalmak yerine değiştirmemiz, ilk durumda yaşayacağımız
+      durumu tersine çeviriyor.
+    </p>
+    <table>
+      <tr>
+        <th>Oodanın içindeki</th>
+        <th>Sonuçta kazandığımız</th>
+      </tr>
+      <tr>
+        <td>Araba</td>
+        <td>Keçi</td>
+      </tr>
+      <tr class="bg-green">
+        <td>Keçi</td>
+        <td>Araba</td>
+      </tr>
+      <tr class="bg-green">
+        <td>Keçi</td>
+        <td>Araba</td>
+      </tr>
+    </table>
+    <p>
+      Burada seçimimizi değiştirdiğimiz anda araba kazanma olasılığımız %66'ya
+      çıkıyor.
+    </p>
+    <h2>Özet</h2>
+    <p>
+      Kapıyı değiştirdiğinizde kazanma olasılığınız %67'dir, yani başlangıçtaki
+      seçimlerinizin yanlış olma olasılığıdır. Başlangıçta seçiminizin yanlış
+      olma olasılığı daha yüksek olduğu için, değiştirmek mantıklıdır. İlk
+      seçiminizde doğru kapıyı seçme olasılığınız %33'tür. Yanlış kapıyı seçme
+      olasılığınız %67'dir.Sunucumuz her zaman keçiyi gösterdiği için, kapıyı
+      değiştirdiğinizde kazanma olasılığınız %67 olur.
+    </p>
+  </body>
+</html>
