@@ -1,0 +1,1 @@
+enum BoxType { car, goat }
